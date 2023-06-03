@@ -22,7 +22,7 @@ import { DirectiveLocation, GraphQLDirective } from 'graphql';
       useGlobalPrefix: true,
       installSubscriptionHandlers: true,
       context: ({req}) => ({req}),
-      introspection: playground || introspection,
+      introspection: true,
       playground: true,
       cors: {
         origin: true,
