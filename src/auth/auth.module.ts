@@ -6,6 +6,7 @@ import { JwtModule, JwtService } from '@nestjs/jwt';
 import { JwtStrategy } from './jwt.strategy';
 import { AuthResolver } from './auth.resolver';
 import { LocalStrategy } from './local.strategy';
+import { UsersService } from 'src/users/users.service';
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { LocalStrategy } from './local.strategy';
       signOptions: { expiresIn: '60s' },
     }),
   ],
-  providers: [AuthService, JwtStrategy, AuthResolver, LocalStrategy],
+  providers: [AuthService, UsersService, JwtStrategy, AuthResolver, LocalStrategy],
   exports: [AuthService],
 })
 export class AuthModule {}
