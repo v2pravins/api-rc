@@ -13,6 +13,7 @@ import { UsersModule } from './users/users.module';
 import { ManufacturersModule } from './manufacturers/manufacturers.module';
 import { AuthModule } from './auth/auth.module';
 import { DirectiveLocation, GraphQLDirective } from 'graphql';
+import { UsersService } from './users/users.service';
 
 @Module({
   imports: [
@@ -46,6 +47,6 @@ import { DirectiveLocation, GraphQLDirective } from 'graphql';
     AuthModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, UsersService],
 })
 export class AppModule {}
