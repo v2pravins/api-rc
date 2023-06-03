@@ -23,8 +23,8 @@ import { DirectiveLocation, GraphQLDirective } from 'graphql';
       installSubscriptionHandlers: true,
       context: ({req}) => ({req}),
       cors: {
-        origin: 'https://revcon-init.herokuapp.com',
-        credentials: true,
+        origin: '*',
+        credentials: false,
       },
       buildSchemaOptions: {
         directives: [
